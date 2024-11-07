@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboarding1Fragment">
+
+    <fragment
+        android:id="@+id/onboarding1Fragment"
+        android:name="com.example.fragments.Onboarding1Fragment"
+        android:label="fragment_onboarding1"
+        tools:layout="@layout/fragment_onboarding1" >
+        <action
+            android:id="@+id/action_onboarding1Fragment_to_onboarding2Fragment"
+            app:destination="@id/onboarding2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_onboarding1Fragment_to_onboarding3FragmentAdios"
+            app:destination="@id/onboarding3FragmentAdios"
+            app:enterAnim="@anim/fade_in_right"
+            app:exitAnim="@anim/fade_out_left"
+            app:popEnterAnim="@anim/fade_in_left"
+            app:popExitAnim="@anim/fade_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboarding2Fragment"
+        android:name="com.example.fragments.Onboarding2Fragment"
+        android:label="fragment_onboarding2"
+        tools:layout="@layout/fragment_onboarding2" >
+        <action
+            android:id="@+id/action_onboarding2Fragment_to_onboarding3FragmentAdios"
+            app:destination="@id/onboarding3FragmentAdios"
+            app:enterAnim="@anim/fade_in_right"
+            app:exitAnim="@anim/fade_out_left"
+            app:popEnterAnim="@anim/fade_in_left"
+            app:popExitAnim="@anim/fade_out_right" />
+        <action
+            android:id="@+id/action_onboarding2Fragment_to_onboarding4Fragment"
+            app:destination="@id/onboarding4Fragment"
+            app:enterAnim="@anim/rotate"
+            app:exitAnim="@anim/rotate"
+            app:popEnterAnim="@anim/rotate"
+            app:popExitAnim="@anim/rotate"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/onboarding3FragmentAdios"
+        android:name="com.example.fragments.Onboarding3FragmentAdios"
+        android:label="fragment_onboarding3_adios"
+        tools:layout="@layout/fragment_onboarding3_adios" />
+    <fragment
+        android:id="@+id/onboarding4Fragment"
+        android:name="com.example.fragments.Onboarding4Fragment"
+        android:label="fragment_onboarding4fragment"
+        tools:layout="@layout/fragment_onboarding4fragment" >
+        <action
+            android:id="@+id/action_onboarding4fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
